@@ -14,6 +14,11 @@
 		9E79B33A2B91699700E3F1D2 /* KitchenIngredientTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E79B3392B91699700E3F1D2 /* KitchenIngredientTrackerTests.swift */; };
 		9E79B3442B91699700E3F1D2 /* KitchenIngredientTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E79B3432B91699700E3F1D2 /* KitchenIngredientTrackerUITests.swift */; };
 		9E79B3462B91699700E3F1D2 /* KitchenIngredientTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E79B3452B91699700E3F1D2 /* KitchenIngredientTrackerUITestsLaunchTests.swift */; };
+		9E79B3542B916C3900E3F1D2 /* theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E79B3532B916C3900E3F1D2 /* theme.swift */; };
+		9E79B3562B916C8B00E3F1D2 /* dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E79B3552B916C8B00E3F1D2 /* dashboard.swift */; };
+		9E79B3592B916EA900E3F1D2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9E79B3582B916EA900E3F1D2 /* FirebaseAnalytics */; };
+		9E79B35B2B916EA900E3F1D2 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 9E79B35A2B916EA900E3F1D2 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		9E79B35D2B916FA500E3F1D2 /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E79B35C2B916FA500E3F1D2 /* cardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,9 @@
 		9E79B33F2B91699700E3F1D2 /* KitchenIngredientTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitchenIngredientTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E79B3432B91699700E3F1D2 /* KitchenIngredientTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenIngredientTrackerUITests.swift; sourceTree = "<group>"; };
 		9E79B3452B91699700E3F1D2 /* KitchenIngredientTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenIngredientTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9E79B3532B916C3900E3F1D2 /* theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theme.swift; sourceTree = "<group>"; };
+		9E79B3552B916C8B00E3F1D2 /* dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboard.swift; sourceTree = "<group>"; };
+		9E79B35C2B916FA500E3F1D2 /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E79B3592B916EA900E3F1D2 /* FirebaseAnalytics in Frameworks */,
+				9E79B35B2B916EA900E3F1D2 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +104,7 @@
 		9E79B3272B91699500E3F1D2 /* KitchenIngredientTracker */ = {
 			isa = PBXGroup;
 			children = (
+				9E79B3522B916C2500E3F1D2 /* Models */,
 				9E79B3282B91699500E3F1D2 /* KitchenIngredientTrackerApp.swift */,
 				9E79B32A2B91699500E3F1D2 /* ContentView.swift */,
 				9E79B32C2B91699700E3F1D2 /* Assets.xcassets */,
@@ -127,6 +138,16 @@
 			path = KitchenIngredientTrackerUITests;
 			sourceTree = "<group>";
 		};
+		9E79B3522B916C2500E3F1D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E79B3532B916C3900E3F1D2 /* theme.swift */,
+				9E79B3552B916C8B00E3F1D2 /* dashboard.swift */,
+				9E79B35C2B916FA500E3F1D2 /* cardView.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +164,10 @@
 			dependencies = (
 			);
 			name = KitchenIngredientTracker;
+			packageProductDependencies = (
+				9E79B3582B916EA900E3F1D2 /* FirebaseAnalytics */,
+				9E79B35A2B916EA900E3F1D2 /* FirebaseAnalyticsWithoutAdIdSupport */,
+			);
 			productName = KitchenIngredientTracker;
 			productReference = 9E79B3252B91699500E3F1D2 /* KitchenIngredientTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +240,9 @@
 				Base,
 			);
 			mainGroup = 9E79B31C2B91699500E3F1D2;
+			packageReferences = (
+				9E79B3572B916EA900E3F1D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9E79B3262B91699500E3F1D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E79B32B2B91699500E3F1D2 /* ContentView.swift in Sources */,
+				9E79B3542B916C3900E3F1D2 /* theme.swift in Sources */,
+				9E79B3562B916C8B00E3F1D2 /* dashboard.swift in Sources */,
 				9E79B3292B91699500E3F1D2 /* KitchenIngredientTrackerApp.swift in Sources */,
+				9E79B35D2B916FA500E3F1D2 /* cardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +613,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9E79B3572B916EA900E3F1D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E79B3582B916EA900E3F1D2 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E79B3572B916EA900E3F1D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		9E79B35A2B916EA900E3F1D2 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E79B3572B916EA900E3F1D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9E79B31D2B91699500E3F1D2 /* Project object */;
 }
